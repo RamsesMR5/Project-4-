@@ -45,13 +45,13 @@ ORDER BY total_jobs DESC;
 	GROUP BY company_location
 	ORDER BY min_salary DESC;
     
-	SELECT MAX(salary_in_usd) AS min_salary, company_location
+	SELECT MAX(salary_in_usd) AS max_salary, company_location
 	FROM da_df
 	WHERE job_title in ('Data Engineer', 'Data Scientist', 'Data Analyst')
 	AND company_location in ('US', 'AU', 'GB', 'ES', 'BR')
 	AND employment_type in ('FT')
 	GROUP BY company_location
-	ORDER BY min_salary DESC;
+	ORDER BY max_salary DESC;
 
 
 
